@@ -28,8 +28,7 @@ public class AppBiblioteca {
             System.out.print("Opção: ");
 
             opcao = in.nextInt();
-            in.nextLine(); // Tira o ENTER que ficou na entrada na instrução anterior
-           //1 Primeira verificação: Verificar se existe um produto com o codigo igual ao fornecido pelo usuario(Fazer uma busca). 
+            in.nextLine(); 
             
            //#region Opção 1 - Cadastrar livro
             if (opcao == 1) {
@@ -116,22 +115,17 @@ public class AppBiblioteca {
                         System.out.println("Nenhum livro encontrado com o código informado.");
                     }
                 }
-                //Retornar "Nenhum produto encontrado" caso a escolha seja nenhum codigo dos produtos cadastrados
-                //voltarMenu(in);
             //#endregion
 
             //#region Opção 3 - Listar todos livros
             } else if (opcao == 3) {
-                //Se a lista estiver vazia não há o que procurar.
-
+               
                 if (livros.size() == 0){
                     System.out.println("Não existem livros a serem listados.");
                     voltarMenu(in);
                     continue;
                 }
-                //Ordenar pelo nome: usando o metodo sort separado ou na stream
-                //Adequar a listagem ao anunciado da prova(Pode ser da quantidade em estoque ou do preço do produto)
-        
+                
                 livros.forEach(System.out::println);
                 System.out.println("\n************Locações************\n");
                 locacao.forEach(System.out::println);
@@ -205,6 +199,18 @@ public class AppBiblioteca {
             }
             //#endregion
             
+            //#region Opção 6 - Relatório de livros com devolução em aberto
+            else if (opcao == 6) {
+                System.out.println("Relatório de livros com devolução em aberto");
+            }
+            //#endregion
+
+            //#region Opção 7 - Relatório de livros alugados por período
+            else if (opcao == 7) {
+                System.out.println("Relatório de livros alugados por período");
+            }
+            //#endregion
+
             else if (opcao != 0) {
                 System.out.println("\nOpção inválida!");
             }

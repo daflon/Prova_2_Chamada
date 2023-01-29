@@ -34,7 +34,7 @@ public class Locacao extends Livros {
     @Override
     public String toString() {
         return String.format("Data da locação: " + getDataLocacao() + "\nCPF: " + getCpfCliente() 
-        + "\nData de devolução: " + getDataDevolucao() + "\nStatus: " + getStatus() + "Código: " + getCodLivro() + "\nTitulo: " + getTitulo() + "\nAutor: " + 
+        + "\nData de devolução: " + getDataDevolucao() + "\nStatus: " + getStatus() + "\nCódigo: " + getCodLivro() + "\nTitulo: " + getTitulo() + "\nAutor: " + 
         getAutor() + "\nNúmero de páginas: "+getNumPaginas()+".");
     }
 }
